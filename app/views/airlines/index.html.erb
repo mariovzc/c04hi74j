@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1>Salidas Internacionales</h1>
+
+      <table class="table flights">
+        <thead>
+          <tr>
+            <th class="text-center">Airline</th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Flights</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @airlines.each do |airline| %>
+          <tr>
+            <td class="airline-logo"><img src="<%= airline.logo_url %>" /></td>
+            <td><%= airline.name %></td>
+            <td><%= airline.flights.count%></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
